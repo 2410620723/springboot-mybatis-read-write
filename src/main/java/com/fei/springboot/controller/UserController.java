@@ -30,6 +30,9 @@ public class UserController {
 	@RequestMapping("/add")
 	@ResponseBody
 	public String add(String id,String userName){
+		if (this.userService.findById(id) != null) {
+			return "当前id已存在";
+		}
 		User u = new User();
 		u.setId(id);
 		u.setUserName(userName);
