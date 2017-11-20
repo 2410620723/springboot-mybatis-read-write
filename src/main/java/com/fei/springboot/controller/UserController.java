@@ -36,6 +36,14 @@ public class UserController {
 		this.userService.insertUser(u);
 		return u.getId()+"    " + u.getUserName();
 	}
+	@RequestMapping("/update")
+	@ResponseBody
+	public String update(String id, String userName) {
+		User u = this.userService.findById(id);
+		u.setUserName(userName);
+		this.userService.update(u);
+		return u.getId()+"    " + u.getUserName();
+	}
 	/**
 	 * 测试读
 	 * @param id
