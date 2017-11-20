@@ -11,7 +11,11 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
+/**
+ * redis配置
+ * @author zxm
+ *
+ */
 @Configuration
 @EnableCaching
 public class RedisConfig {
