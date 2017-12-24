@@ -32,3 +32,7 @@ start slave;
 show slave status\G;
 当出现Slave_IO_Running: Yes   Slave_SQL_Running: Yes则表示成功了。
 注意：在安装两个MySQL服务的时候需要设置不同的端口及不同的服务名，否则会产生端口及服务冲突的。
+
+#打包jar以及发布
+右键项目选择Debug As -> Debug Configurations...
+在goals框中填入package。
